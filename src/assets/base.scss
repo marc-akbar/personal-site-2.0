@@ -1,0 +1,313 @@
+@import "./colors.scss";
+
+@import "./media.scss";
+@import "./loading.scss";
+@import "./title-animation.scss";
+@import "./navigation.scss";
+@import "./switch.scss";
+@import "./scene.scss";
+@import "./work.scss";
+@import "./about.scss";
+@import "./footer.scss";
+
+body {
+  margin: 0 !important;
+}
+
+.night {
+  --background: #303c3c; /* $dark-background */
+  --loading: #293333; /* $night-scene-background */
+
+  --nav-background: #293333; /* $night-scene-background */
+  --nav-btn: #f5f5f0; /* $light-gold */
+  --sidenav-trigger: inherit;
+  --sidenav-background: #293333; /* $night-scene-background */
+  --sidenav-btn: #f5f5f0; /* $light-gold */
+
+  --scene-background: #293333; /* $night-scene-background */
+
+  --greeting-text: #f5f5f0; /* $light-gold */
+  --page-title: #ab9120; /* $gold */
+
+  --about-title: #91812c; /* $shaded-gold */
+  --about-text: #f5f5f0; /* $light-gold */
+
+  --recent-work-background: #3f4e4e;
+  --recent-work-title: #ab9120; /* $gold */
+  --recent-work-text: #f5f5f0; /* $light-gold */
+
+  --eb-background: none;
+  --eb-title: #f5f5f0; /* $light-gold */
+  --eb-subtitle: #bfedea;
+  --eb-text: #f5f5f0; /* $light-gold */
+  --eb-btn: #e2c557; /* $btn-color */
+  --eb-btn-text: #293333;
+
+  --tb-background: none;
+  --tb-title: #f5f5f0; /* $light-gold */
+  --tb-subtitle: #bfedea;
+  --tb-text: #f5f5f0; /* $light-gold */
+  --tb-btn: #e2c557; /* $btn-color */
+  --tb-btn-text: #293333;
+
+  --ft-background: none;
+  --ft-title: #f5f5f0; /* $light-gold */
+  --ft-subtitle: #bfedea;
+  --ft-text: #f5f5f0; /* $light-gold */
+  --ft-btn: #e2c557; /* $btn-color */
+  --ft-btn-text: #293333;
+
+  --wb-background: none;
+  --wb-title: #f5f5f0; /* $light-gold */
+  --wb-subtitle: #bfedea;
+  --wb-text: #f5f5f0; /* $light-gold */
+  --wb-btn: #e2c557; /* $btn-color */
+  --wb-btn-text: #293333;
+
+  --personal-background: none;
+  --personal-title: #f5f5f0; /* $light-gold */
+  --personal-subtitle: #bfedea;
+  --personal-text: #f5f5f0; /* $light-gold */
+  --personal-btn: #e2c557; /* $btn-color */
+  --personal-btn-text: #293333;
+
+  --footer-background: #293333; /* $night-scene-background */
+  --footer-title: #ab9120; /* $gold */
+  --footer-text: #f5f5f0; /* $light-gold */
+
+  --social-background: #293333; /* $night-scene-background */
+  --logo-filter: none;
+  --logo-hover-filter: contrast(2) hue-rotate(110deg) brightness(0.6); /*$logo-green-shift */
+}
+
+.day {
+  --background: #f5f5f0; /* $light-gold */
+  --loading: #c9e9f2; /* $day-scene-background */
+
+  --nav-background: #c9e9f2; /* $day-scene-background */
+  --nav-btn: #293333; /* $night-scene-background */
+  --sidenav-trigger: #293333; /* $night-scene-background */
+  --sidenav-background: #c9e9f2; /* $day-scene-background */
+  --sidenav-btn: inherit;
+
+  --scene-background: #c9e9f2; /* $day-scene-background */
+
+  --greeting-text: #293333; /* $night-scene-background */
+  --page-title: #175e5a; /* $shaded-teal */
+
+  --about-title: #175e5a; /* $shaded-teal */
+  --about-text: inherit;
+
+  --recent-work-background: inherit;
+  --recent-work-title: #175e5a; /* $shaded-teal */
+  --recent-work-text: inherit;
+
+  --eb-background: #e2c557; /* $btn-color */
+  --eb-title: #124d49; /* $dark-teal */
+  --eb-subtitle: #175e5a; /* $shaded-teal */
+  --eb-text: inherit;
+  --eb-btn: #4d789b; /* $eb-btn-color */
+  --eb-btn-text: inherit;
+
+  --tb-background: #eae6cb;
+  --tb-title: #124d49; /* $dark-teal */
+  --tb-subtitle: #175e5a; /* $shaded-teal */
+  --tb-text: inherit;
+  --tb-btn: #ff4237; /* $tb-btn-color */
+  --tb-btn-text: inherit;
+
+  --ft-background: #8396ff;
+  --ft-title: #124d49; /* $dark-teal */
+  --ft-subtitle: #124d49; /* $dark-teal */
+  --ft-text: inherit;
+  --ft-btn: #5cb85c; /* $wb-btn-color */
+  --ft-btn-text: inherit;
+
+  --wb-background: #d6bb54;
+  --wb-title: #282327;
+  --wb-subtitle: #3a3942;
+  --wb-text: inherit;
+  --wb-btn: #c36322; /* $wb-btn-color */
+  --wb-btn-text: inherit;
+
+  --personal-background: #175e5a; /* $shaded-teal */
+  --personal-title: #ab9120; /* $gold */
+  --personal-subtitle: #91812c; /* $shaded-gold */
+  --personal-text: #f5f5f0; /* $light-gold */
+  --personal-btn: #18aba2; /* personal-btn-color */
+  --personal-btn-text: inherit;
+
+  --footer-background: #c9e9f2; /* $day-scene-background */
+  --footer-title: #175e5a; /* $shaded-teal */
+  --footer-text: inherit;
+
+  --social-background: #c9e9f2; /*$day-scene-background */
+  --logo-filter: contrast(2) hue-rotate(110deg) brightness(0.6); /* $logo-green-shift */
+  --logo-hover-filter: contrast(100%) hue-rotate(0) brightness(1); /* $logo-gold-shift */
+}
+
+.wrapper {
+  & * {
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
+  & .site-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  background-color: var(--background);
+}
+
+p {
+  letter-spacing: 0.02rem;
+  font-size: 12px;
+}
+
+.container {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.greeting-heading {
+  position: relative;
+  margin-bottom: 7vw;
+  z-index: 2;
+}
+
+.greeting-title {
+  position: relative;
+  margin-bottom: 4vw;
+  z-index: 2;
+  & svg {
+    max-width: 90%;
+  }
+}
+
+.greeting-text > p {
+  position: relative;
+  font-family: "Baloo Tammudu 2", cursive, sans-serif;
+  font-size: 2.5rem;
+  z-index: 2;
+
+  color: var(--greeting-text);
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  padding-top: 2.8rem;
+  padding-bottom: 5vw;
+  font-family: "Satisfy", cursive, sans-serif;
+  font-size: 10rem;
+  z-index: 2;
+
+  color: var(--page-title);
+}
+
+.mountain-image {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  max-width: 100%;
+  bottom: 0;
+  z-index: 2;
+}
+
+.white-star-image {
+  content: url("../images/scenes/white-star.png");
+  position: absolute;
+  height: 4px;
+  z-index: 1;
+}
+
+.gold-star-image {
+  content: url("../images/scenes/gold-star.png");
+  position: absolute;
+  height: 8px;
+  z-index: 1;
+}
+
+.teal-star-image {
+  content: url("../images/scenes/teal-star.png");
+  position: absolute;
+  height: 15px;
+  z-index: 1;
+}
+
+@keyframes particleAnimation {
+  from {
+    left: -2000px;
+  }
+  to {
+    left: calc(100% + 500px);
+  }
+}
+
+.particle {
+  position: absolute;
+  left: 0px;
+  top: 10vw;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  animation-name: particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.particle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 150px;
+  right: 1px;
+  top: 0px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.particle-1 {
+  animation-duration: 13s;
+  top: 30%;
+}
+
+.particle-2 {
+  animation-duration: 23s;
+  top: 65%;
+}
+
+.social-scene {
+  background-color: var(--social-background);
+}
+
+.social {
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+
+  & ul > li {
+    position: relative;
+    display: inline-block;
+    margin: 5px 18px 5px 18px;
+    & a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      & img {
+        height: 32px;
+        filter: var(--logo-filter);
+        -webkit-filter: var(--logo-filter);
+      }
+    }
+    & a:hover > img {
+      filter: var(--logo-hover-filter);
+      -webkit-filter: var(--logo-hover-filter);
+    }
+  }
+}
