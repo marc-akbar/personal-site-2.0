@@ -1,0 +1,65 @@
+.night {
+  --background: #303c3c; /* $dark-background */
+  --loading: #293333; /* $night-scene-background */
+
+  --nav-background: #293333; /* $night-scene-background */
+  --nav-btn: #f5f5f0; /* $light-gold */
+  --sidenav-trigger: inherit;
+  --sidenav-background: #293333; /* $night-scene-background */
+  --sidenav-btn: #f5f5f0; /* $light-gold */
+
+  --scene-background: #293333; /* $night-scene-background */
+
+  --greeting-text: #f5f5f0; /* $light-gold */
+  --page-title: #ab9120; /* $gold */
+
+  --about-title: #91812c; /* $shaded-gold */
+  --about-text: #f5f5f0; /* $light-gold */
+
+  --recent-work-background: #3f4e4e;
+  --recent-work-title: #ab9120; /* $gold */
+  --recent-work-text: #f5f5f0; /* $light-gold */
+
+  --eb-background: none;
+  --eb-title: #f5f5f0; /* $light-gold */
+  --eb-subtitle: #bfedea;
+  --eb-text: #f5f5f0; /* $light-gold */
+  --eb-btn: #e2c557; /* $btn-color */
+  --eb-btn-text: #293333;
+
+  --tb-background: none;
+  --tb-title: #f5f5f0; /* $light-gold */
+  --tb-subtitle: #bfedea;
+  --tb-text: #f5f5f0; /* $light-gold */
+  --tb-btn: #e2c557; /* $btn-color */
+  --tb-btn-text: #293333;
+
+  --ft-background: none;
+  --ft-title: #f5f5f0; /* $light-gold */
+  --ft-subtitle: #bfedea;
+  --ft-text: #f5f5f0; /* $light-gold */
+  --ft-btn: #e2c557; /* $btn-color */
+  --ft-btn-text: #293333;
+
+  --wb-background: none;
+  --wb-title: #f5f5f0; /* $light-gold */
+  --wb-subtitle: #bfedea;
+  --wb-text: #f5f5f0; /* $light-gold */
+  --wb-btn: #e2c557; /* $btn-color */
+  --wb-btn-text: #293333;
+
+  --personal-background: none;
+  --personal-title: #f5f5f0; /* $light-gold */
+  --personal-subtitle: #bfedea;
+  --personal-text: #f5f5f0; /* $light-gold */
+  --personal-btn: #e2c557; /* $btn-color */
+  --personal-btn-text: #293333;
+
+  --footer-background: #293333; /* $night-scene-background */
+  --footer-title: #ab9120; /* $gold */
+  --footer-text: #f5f5f0; /* $light-gold */
+
+  --social-background: #293333; /* $night-scene-background */
+  --logo-filter: none;
+  --logo-hover-filter: contrast(2) hue-rotate(110deg) brightness(0.6); /*$logo-green-shift */
+}

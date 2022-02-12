@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import Greeting from "components/Greeting.vue";
+</script>
 
 <template>
-  <main></main>
+  <Greeting />
 </template>

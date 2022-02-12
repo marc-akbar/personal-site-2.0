@@ -1,0 +1,24 @@
+@import "./day.scss";
+@import "./night.scss";
+
+$dark-background: #303c3c;
+$night-scene-background: #293333;
+$day-scene-background: #c9e9f2;
+
+$light-gold: #f5f5f0;
+$gold: #ab9120;
+$shaded-gold: #91812c;
+$dark-gold: #5e4f0d;
+$custom-teal: #18aba2;
+$shaded-teal: #175e5a;
+$dark-teal: #124d49;
+
+$eb-btn-color: #4d789b;
+$tb-btn-color: #ff4237;
+$ft-btn-color: #5cb85c;
+$wb-btn-color: #c36322;
+$personal-btn-color: #18aba2;
+$btn-color: #e2c557;
+
+$logo-green-shift: contrast(2) hue-rotate(110deg) brightness(0.6);
+$logo-gold-shift: contrast(100%) hue-rotate(0) brightness(1);

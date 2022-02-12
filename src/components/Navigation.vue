@@ -1,26 +1,39 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import Toggle from "@/components/Toggle.vue";
+import Toggle from "components/Toggle.vue";
 </script>
 
 <template>
-  <nav class="nav-wrapper">
-    <Toggle />
-    <div class="nav-links">
-      <RouterLink class="nav-link" to="/">home</RouterLink>
-      <RouterLink class="nav-link" to="/about">about</RouterLink>
+  <nav class="nav-root">
+    <div class="nav-container">
+      <div class="nav-wrapper">
+        <Toggle />
+        <div class="nav-links">
+          <RouterLink class="nav-link" to="/">home</RouterLink>
+          <RouterLink class="nav-link" to="/about">about</RouterLink>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
 
 <style lang="scss">
-@import "@/assets/base.scss";
+@import "assets/palette.scss";
+
+.nav-root {
+  background-color: var(--nav-background);
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 0.5rem;
+  max-width: 1280px;
+}
 
 .nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
 }
 
 .nav-links {

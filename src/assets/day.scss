@@ -1,0 +1,65 @@
+.day {
+  --background: #f5f5f0; /* $light-gold */
+  --loading: #c9e9f2; /* $day-scene-background */
+
+  --nav-background: #c9e9f2; /* $day-scene-background */
+  --nav-btn: #293333; /* $night-scene-background */
+  --sidenav-trigger: #293333; /* $night-scene-background */
+  --sidenav-background: #c9e9f2; /* $day-scene-background */
+  --sidenav-btn: inherit;
+
+  --scene-background: #c9e9f2; /* $day-scene-background */
+
+  --greeting-text: #293333; /* $night-scene-background */
+  --page-title: #175e5a; /* $shaded-teal */
+
+  --about-title: #175e5a; /* $shaded-teal */
+  --about-text: inherit;
+
+  --recent-work-background: inherit;
+  --recent-work-title: #175e5a; /* $shaded-teal */
+  --recent-work-text: inherit;
+
+  --eb-background: #e2c557; /* $btn-color */
+  --eb-title: #124d49; /* $dark-teal */
+  --eb-subtitle: #175e5a; /* $shaded-teal */
+  --eb-text: inherit;
+  --eb-btn: #4d789b; /* $eb-btn-color */
+  --eb-btn-text: inherit;
+
+  --tb-background: #eae6cb;
+  --tb-title: #124d49; /* $dark-teal */
+  --tb-subtitle: #175e5a; /* $shaded-teal */
+  --tb-text: inherit;
+  --tb-btn: #ff4237; /* $tb-btn-color */
+  --tb-btn-text: inherit;
+
+  --ft-background: #8396ff;
+  --ft-title: #124d49; /* $dark-teal */
+  --ft-subtitle: #124d49; /* $dark-teal */
+  --ft-text: inherit;
+  --ft-btn: #5cb85c; /* $wb-btn-color */
+  --ft-btn-text: inherit;
+
+  --wb-background: #d6bb54;
+  --wb-title: #282327;
+  --wb-subtitle: #3a3942;
+  --wb-text: inherit;
+  --wb-btn: #c36322; /* $wb-btn-color */
+  --wb-btn-text: inherit;
+
+  --personal-background: #175e5a; /* $shaded-teal */
+  --personal-title: #ab9120; /* $gold */
+  --personal-subtitle: #91812c; /* $shaded-gold */
+  --personal-text: #f5f5f0; /* $light-gold */
+  --personal-btn: #18aba2; /* personal-btn-color */
+  --personal-btn-text: inherit;
+
+  --footer-background: #c9e9f2; /* $day-scene-background */
+  --footer-title: #175e5a; /* $shaded-teal */
+  --footer-text: inherit;
+
+  --social-background: #c9e9f2; /*$day-scene-background */
+  --logo-filter: contrast(2) hue-rotate(110deg) brightness(0.6); /* $logo-green-shift */
+  --logo-hover-filter: contrast(100%) hue-rotate(0) brightness(1); /* $logo-gold-shift */
+}

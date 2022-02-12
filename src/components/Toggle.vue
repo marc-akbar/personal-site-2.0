@@ -21,8 +21,6 @@
 </template>
 
 <style lang="scss">
-@import "@/assets/base.scss";
-
 .toggle-wrapper {
   & input {
     display: none;

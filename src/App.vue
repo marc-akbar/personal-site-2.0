@@ -1,7 +1,6 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import Navigation from "@/components/Navigation.vue";
-import Head from "@/components/Head.vue";
+import Navigation from "components/Navigation.vue";
+import Head from "components/Head.vue";
 </script>
 
 <template>
@@ -13,13 +12,18 @@ import Head from "@/components/Head.vue";
 </template>
 
 <style lang="scss">
-@import "@/assets/base.scss";
+@import "assets/palette.scss";
+
+body {
+  margin: 0 !important;
+}
 
 p {
   letter-spacing: 0.02857rem;
 }
 
 .wrapper {
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
