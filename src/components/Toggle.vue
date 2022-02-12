@@ -1,5 +1,3 @@
-<script setup></script>
-
 <!-- From Benjamin Réthoré https://codepen.io/bnthor -->
 <template>
   <div class="toggle-wrapper">

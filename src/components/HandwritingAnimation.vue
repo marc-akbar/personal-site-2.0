@@ -58,44 +58,36 @@
   </svg>
 </template>
 
-<style>
+<style lang="scss">
 @import "assets/palette.scss";
 
 .hello-path {
   stroke: var(--page-title);
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
 }
 
 .hello-path--h {
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
   stroke-width: 22;
   animation: letter-animation 4.5s linear forwards 0.3s;
 }
 
 .hello-path--el {
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
   stroke-width: 36;
   animation: letter-animation 4.5s linear forwards 1s;
 }
 
 .hello-path--l {
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
   stroke-width: 20;
   animation: letter-animation 4.5s linear forwards 1.4s;
 }
 
 .hello-path--o {
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
   stroke-width: 25;
   animation: letter-animation 4.5s linear forwards 1.7s;
 }
 
 .hello-path--dot {
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
   stroke-width: 30;
   animation: letter-animation 4.5s linear forwards 2.2s;
 }

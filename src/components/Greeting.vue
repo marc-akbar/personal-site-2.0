@@ -1,5 +1,5 @@
 <script setup>
-import HandWritingAnimation from "components/HandWritingAnimation.vue";
+import HandwritingAnimation from "components/HandwritingAnimation.vue";
 </script>
 
 <template>
@@ -7,9 +7,10 @@ import HandWritingAnimation from "components/HandWritingAnimation.vue";
     <div id="scene" class="">
       <div class="particle particle-1"></div>
       <div class="particle particle-2"></div>
+
       <div class="container">
         <div class="greeting-heading">
-          <div class="greeting-title"><HandWritingAnimation /></div>
+          <div class="greeting-title"><HandwritingAnimation /></div>
           <div class="greeting-text">I'm Marc, a web-based developer.</div>
         </div>
         <img
@@ -27,7 +28,6 @@ import HandWritingAnimation from "components/HandWritingAnimation.vue";
 
 #scene {
   position: relative;
-  padding-top: 90px;
   z-index: 0;
   background-color: var(--scene-background);
 }
