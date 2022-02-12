@@ -1,15 +1,31 @@
-/* From Benjamin Réthoré https://codepen.io/bnthor */
+<script setup></script>
 
-.toggleWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
-  transform: translate3d(-50%, -50%, 0);
+<!-- From Benjamin Réthoré https://codepen.io/bnthor -->
+<template>
+  <div class="toggle-wrapper">
+    <input type="checkbox" class="dn" id="dn" checked />
+    <label for="dn" class="toggle">
+      <span class="toggle__handler">
+        <span class="crater crater--1"></span>
+        <span class="crater crater--2"></span>
+        <span class="crater crater--3"></span>
+      </span>
+      <span class="star star--1"></span>
+      <span class="star star--2"></span>
+      <span class="star star--3"></span>
+      <span class="star star--4"></span>
+      <span class="star star--5"></span>
+      <span class="star star--6"></span>
+    </label>
+  </div>
+</template>
 
-  input {
-    position: absolute;
-    left: -99em;
+<style lang="scss">
+@import "@/assets/base.scss";
+
+.toggle-wrapper {
+  & input {
+    display: none;
   }
 }
 
@@ -191,3 +207,4 @@ input:checked {
     }
   }
 }
+</style>

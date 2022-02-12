@@ -3,8 +3,6 @@
 @import "./media.scss";
 @import "./loading.scss";
 @import "./title-animation.scss";
-@import "./navigation.scss";
-@import "./switch.scss";
 @import "./scene.scss";
 @import "./work.scss";
 @import "./about.scss";
@@ -144,24 +142,6 @@ body {
   --social-background: #c9e9f2; /*$day-scene-background */
   --logo-filter: contrast(2) hue-rotate(110deg) brightness(0.6); /* $logo-green-shift */
   --logo-hover-filter: contrast(100%) hue-rotate(0) brightness(1); /* $logo-gold-shift */
-}
-
-.wrapper {
-  & * {
-    transition: color 0.5s ease, background-color 0.5s ease;
-  }
-  & .site-wrapper {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  background-color: var(--background);
-}
-
-p {
-  letter-spacing: 0.02rem;
-  font-size: 12px;
 }
 
 .container {
