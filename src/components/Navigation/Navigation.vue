@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 import Toggle from "components/Navigation/Toggle.vue";
 </script>
 

@@ -74,46 +74,22 @@ import Clouds from "components/Greeting/Clouds.vue";
   z-index: 2;
 }
 
-.left-cloud {
-  content: url("assets/images/scenes/cloud.png");
-  position: absolute;
-  left: 5%;
-  top: 30%;
-  z-index: 1;
-}
-
-.right-cloud {
-  content: url("assets/images/scenes/cloud.png");
-  position: absolute;
-  left: 25%;
-  top: 52%;
-  z-index: 1;
-}
-
-.sun-cloud {
-  content: url("assets/images/scenes/sun-cloud.png");
-  position: absolute;
-  left: 65%;
-  top: 17%;
-  z-index: 1;
-}
-
 .white-star-image {
-  content: url("assets/images/scenes/white-star.png");
+  content: url("images/scenes/white-star.png");
   position: absolute;
   height: 4px;
   z-index: 1;
 }
 
 .gold-star-image {
-  content: url("assets/images/scenes/gold-star.png");
+  content: url("images/scenes/gold-star.png");
   position: absolute;
   height: 8px;
   z-index: 1;
 }
 
 .teal-star-image {
-  content: url("assets/images/scenes/teal-star.png");
+  content: url("images/scenes/teal-star.png");
   position: absolute;
   height: 15px;
   z-index: 1;

@@ -1,21 +1,9 @@
 <script setup>
-// import gasp from "http://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js";
+import { ref, onMounted } from "vue";
+import { gsap } from "gsap";
 
-// watchEffect(() => {
-//   this.populateClouds();
-//   this.easeInClouds();
-//   this.raiseClouds();
-// });
-
-function populateClouds() {
-  // Populate and ease in clouds
-  $("<div class='left-cloud'></div>").appendTo(".clouds");
-  $("<div class='right-cloud'></div>").appendTo(".clouds");
-  $("<div class='sun-cloud'></div>").appendTo(".clouds");
-  $("<div class='left-cloud'></div>").appendTo("#say-hi");
-  $("<div class='right-cloud'></div>").appendTo("#say-hi");
-  $("<div class='sun-cloud'></div>").appendTo("#say-hi");
-}
+const leftCloud = ref(null);
+const sunCloud = ref(null);
 
 function easeInClouds() {
   gsap.from([".left-cloud", ".right-cloud", ".sun-cloud"], {
@@ -26,28 +14,35 @@ function easeInClouds() {
 }
 
 function raiseClouds() {
-  var lCloud = $(".left-cloud");
-  var sunClouds = $(".sun-cloud");
   gsap.from([".left-cloud", ".right-cloud"], {
-    y: lCloud.height() * 1.5,
+    y: leftCloud.value.clientHeight * 1.5,
     ease: "power2.out",
     duration: 2,
   });
-  gsap.from(sunClouds, {
-    y: sunClouds.height() * 1.5,
+  gsap.from(".sun-cloud", {
+    y: sunCloud.value.clientHeight * 1.5,
     ease: "power2.out",
     duration: 2,
   });
 }
+
+onMounted(() => {
+  easeInClouds();
+  raiseClouds();
+});
 </script>
 
 <template>
-  <div class="clouds" />
+  <div class="clouds">
+    <div class="left-cloud" ref="leftCloud" />
+    <div class="right-cloud" ref="rightCloud" />
+    <div class="sun-cloud" ref="sunCloud" />
+  </div>
 </template>
 
 <style lang="scss">
 .left-cloud {
-  content: url("assets/images/scenes/cloud.png");
+  content: url("images/scenes/cloud.png");
   position: absolute;
   left: 5%;
   top: 30%;
@@ -55,7 +50,7 @@ function raiseClouds() {
 }
 
 .right-cloud {
-  content: url("assets/images/scenes/cloud.png");
+  content: url("images/scenes/cloud.png");
   position: absolute;
   left: 25%;
   top: 52%;
@@ -63,7 +58,7 @@ function raiseClouds() {
 }
 
 .sun-cloud {
-  content: url("assets/images/scenes/sun-cloud.png");
+  content: url("images/scenes/sun-cloud.png");
   position: absolute;
   left: 65%;
   top: 17%;
