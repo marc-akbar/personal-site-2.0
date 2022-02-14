@@ -8,28 +8,24 @@ import Particles from "components/Greeting/Particles.vue";
 const props = defineProps({
   darkMode: Boolean,
 });
-
-const scene = ref(null);
 </script>
 
 <template>
-  <div id="greeting-scene">
-    <div id="scene" ref="scene">
-      <Stars v-if="darkMode" scene="scene" />
-      <Clouds v-else />
-      <Particles />
+  <div id="scene">
+    <Stars v-if="darkMode" scene="scene" />
+    <Clouds v-else />
+    <Particles />
 
-      <div class="container">
-        <div class="greeting-heading">
-          <div class="greeting-title"><Hello /></div>
-          <div class="greeting-text">I'm Marc, a web-based developer.</div>
-        </div>
-        <img
-          class="mountain-image"
-          src="images/scenes/mountain-range.png"
-          alt="mountain range graphic"
-        />
+    <div class="greeting-container">
+      <div class="greeting-heading">
+        <div class="greeting-title"><Hello /></div>
+        <div class="greeting-text">I'm Marc, a web-based developer.</div>
       </div>
+      <img
+        class="mountain-image"
+        src="images/scenes/mountain-range.png"
+        alt="mountain range graphic"
+      />
     </div>
   </div>
 </template>
@@ -43,7 +39,7 @@ const scene = ref(null);
   background-color: var(--scene-background);
 }
 
-.container {
+.greeting-container {
   margin: 0 auto;
   max-width: 1280px;
 }
