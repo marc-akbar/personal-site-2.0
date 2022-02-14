@@ -4,6 +4,7 @@ import Toggle from "components/Navigation/Toggle.vue";
 
 const props = defineProps({
   darkMode: Boolean,
+  toggleTime: Function,
 });
 </script>
 

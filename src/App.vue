@@ -4,8 +4,18 @@ import Navigation from "components/Navigation/Navigation.vue";
 
 let darkMode = ref(false);
 
+const storedDarkMode = localStorage.getItem("darkMode");
+if (!storedDarkMode) {
+  localStorage.setItem("darkMode", "FALSE");
+}
+
+if (storedDarkMode === "FALSE") darkMode = ref(false);
+if (storedDarkMode === "TRUE") darkMode = ref(true);
+
 function toggleTime() {
-  darkMode.value = !darkMode.value;
+  const newValue = !darkMode.value;
+  darkMode.value = newValue;
+  localStorage.setItem("darkMode", newValue ? "TRUE" : "FALSE");
 }
 </script>
 
@@ -58,7 +68,7 @@ function toggleTime() {
   </head>
 
   <div class="wrapper" :class="darkMode ? 'night' : 'day'">
-    <Navigation :darkMode="darkMode" @click="toggleTime" />
+    <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
     <RouterView :darkMode="darkMode" />
   </div>
 </template>
