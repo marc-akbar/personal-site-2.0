@@ -1,19 +1,22 @@
 <script setup>
-import HandwritingAnimation from "components/Greeting/HandwritingAnimation.vue";
+import { ref, onMounted } from "vue";
+import HandwritingAnimation from "components/Animations/HandwritingAnimation.vue";
+import Clouds from "components/Animations/Clouds.vue";
+import Stars from "components/Animations/Stars.vue";
 import Particles from "components/Greeting/Particles.vue";
-import Clouds from "components/Greeting/Clouds.vue";
-import Stars from "components/Greeting/Stars.vue";
 
 const props = defineProps({
   darkMode: Boolean,
 });
+
+const scene = ref(null);
 </script>
 
 <template>
   <div id="greeting-scene">
-    <div id="scene">
-      <Stars v-if="darkMode" />
-      <Clouds v-if="!darkMode" />
+    <div id="scene" ref="scene">
+      <Stars v-if="darkMode" scene="scene" />
+      <Clouds v-else />
       <Particles />
 
       <div class="container">
