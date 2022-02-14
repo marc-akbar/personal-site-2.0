@@ -3,5 +3,5 @@ import Greeting from "components/Greeting/Greeting.vue";
 </script>
 
 <template>
-  <Greeting />
+  <Greeting :darkMode="darkMode" />
 </template>

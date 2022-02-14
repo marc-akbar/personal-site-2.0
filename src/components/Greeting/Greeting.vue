@@ -2,12 +2,18 @@
 import HandwritingAnimation from "components/Greeting/HandwritingAnimation.vue";
 import Particles from "components/Greeting/Particles.vue";
 import Clouds from "components/Greeting/Clouds.vue";
+import Stars from "components/Greeting/Stars.vue";
+
+const props = defineProps({
+  darkMode: Boolean,
+});
 </script>
 
 <template>
   <div id="greeting-scene">
-    <div id="scene" class="">
-      <Clouds />
+    <div id="scene">
+      <Stars v-if="darkMode" />
+      <Clouds v-if="!darkMode" />
       <Particles />
 
       <div class="container">
@@ -72,26 +78,5 @@ import Clouds from "components/Greeting/Clouds.vue";
   max-width: 100%;
   bottom: 0;
   z-index: 2;
-}
-
-.white-star-image {
-  content: url("images/scenes/white-star.png");
-  position: absolute;
-  height: 4px;
-  z-index: 1;
-}
-
-.gold-star-image {
-  content: url("images/scenes/gold-star.png");
-  position: absolute;
-  height: 8px;
-  z-index: 1;
-}
-
-.teal-star-image {
-  content: url("images/scenes/teal-star.png");
-  position: absolute;
-  height: 15px;
-  z-index: 1;
 }
 </style>

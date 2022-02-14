@@ -33,7 +33,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="clouds">
+  <div>
     <div class="left-cloud" ref="leftCloud" />
     <div class="right-cloud" ref="rightCloud" />
     <div class="sun-cloud" ref="sunCloud" />

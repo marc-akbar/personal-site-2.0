@@ -1,7 +1,13 @@
 <!-- From Benjamin Réthoré https://codepen.io/bnthor -->
+<script setup>
+const props = defineProps({
+  darkMode: Boolean,
+});
+</script>
+
 <template>
   <div class="toggle-wrapper">
-    <input type="checkbox" class="dn" id="dn" checked />
+    <input type="checkbox" class="dn" v-bind:checked="darkMode" />
     <label for="dn" class="toggle">
       <span class="toggle__handler">
         <span class="crater crater--1"></span>
