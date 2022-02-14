@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Toggle from "components/Navigation/Toggle.vue";
+import Hello from "components/Animations/Hello.vue";
 
 const props = defineProps({
   darkMode: Boolean,
@@ -13,6 +14,7 @@ const props = defineProps({
     <div class="nav-container">
       <div class="nav-wrapper">
         <Toggle :darkMode="darkMode" @click="toggleTime" />
+
         <div class="nav-links">
           <RouterLink class="nav-link" to="/">home</RouterLink>
           <RouterLink class="nav-link" to="/about">about</RouterLink>

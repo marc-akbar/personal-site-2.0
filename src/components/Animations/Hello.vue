@@ -3,9 +3,8 @@
     x="0px"
     y="0px"
     xml:space="preserve"
-    width="4.11111in"
-    height="1.90278in"
     viewBox="0 0 296 137"
+    class="hello-svg"
   >
     <defs>
       <clipPath id="hello">
@@ -60,6 +59,12 @@
 
 <style lang="scss">
 @import "assets/palette.scss";
+
+.hello-svg {
+  width: 4.11111in;
+  height: 1.90278in;
+  max-width: 90%;
+}
 
 .hello-path {
   stroke: var(--page-title);

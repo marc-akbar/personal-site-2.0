@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import HandwritingAnimation from "components/Animations/HandwritingAnimation.vue";
+import Hello from "components/Animations/Hello.vue";
 import Clouds from "components/Animations/Clouds.vue";
 import Stars from "components/Animations/Stars.vue";
 import Particles from "components/Greeting/Particles.vue";
@@ -21,7 +21,7 @@ const scene = ref(null);
 
       <div class="container">
         <div class="greeting-heading">
-          <div class="greeting-title"><HandwritingAnimation /></div>
+          <div class="greeting-title"><Hello /></div>
           <div class="greeting-text">I'm Marc, a web-based developer.</div>
         </div>
         <img
@@ -59,9 +59,6 @@ const scene = ref(null);
   position: relative;
   margin-bottom: 4vw;
   z-index: 2;
-  & svg {
-    max-width: 90%;
-  }
 }
 
 .greeting-text {
