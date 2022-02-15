@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <div id="scene">
-    <Stars v-if="darkMode" scene="scene" />
+    <Stars v-if="darkMode" />
     <Clouds v-else />
     <Particles />
 

@@ -1,30 +1,29 @@
 <script setup>
-import { ref, watchEffect } from "vue";
+import { ref, watch } from "vue";
 import { gsap } from "gsap";
 
-const props = defineProps({
-  scene: String,
-});
-
+const starContainerRef = ref(null);
+const starCoordinates = ref([]);
 const starColors = ["white-star", "gold-star", "teal-star"];
-const starCoordinates = [];
 
 function populateStars() {
   // Star population in scene
-  var sceneWidth = scene.offsetWidth;
-  var sceneHeight = scene.clientHeight;
-  var rBound = sceneWidth * 0.37; // right boundary for left star population
-  var lBound = sceneWidth * 0.63; // left boundary for right star population
+  const containerWidth = starContainerRef.value.offsetWidth;
+  const containerHeight = starContainerRef.value.clientHeight;
+  const rBound = containerWidth * 0.37; // right boundary for left star population
+  const lBound = containerWidth * 0.63; // left boundary for right star population
 
   starColors.map((starColor) => {
-    for (var i = 0; i < sceneWidth / 100; i++) {
+    for (let i = 0; i < containerWidth / 100; i++) {
       {
         // Pad the left by 10px
-        var left = Math.floor(Math.random() * (rBound - 10)) + 10;
-        var top =
-          Math.floor(Math.random() * (sceneHeight - sceneHeight * 0.3)) +
-          sceneHeight * 0.015;
-        starCoordinates.push({
+        const left = Math.floor(Math.random() * (rBound - 10)) + 10;
+        const top =
+          Math.floor(
+            Math.random() * (containerHeight - containerHeight * 0.3)
+          ) +
+          containerHeight * 0.015;
+        starCoordinates.value.push({
           color: starColor,
           left: `${left}px`,
           top: `${top}px`,
@@ -33,11 +32,13 @@ function populateStars() {
 
       {
         // Pad the left and right by 10px
-        var left = Math.floor(Math.random() * (sceneWidth - 25)) + 10;
-        var top =
-          Math.floor(Math.random() * (sceneHeight - sceneHeight * 0.59)) +
-          sceneHeight * 0.3;
-        starCoordinates.push({
+        const left = Math.floor(Math.random() * (containerWidth - 25)) + 10;
+        const top =
+          Math.floor(
+            Math.random() * (containerHeight - containerHeight * 0.59)
+          ) +
+          containerHeight * 0.3;
+        starCoordinates.value.push({
           color: starColor,
           left: `${left}px`,
           top: `${top}px`,
@@ -46,12 +47,16 @@ function populateStars() {
 
       {
         // Pad the right by 10px
-        var left =
-          Math.floor(Math.random() * (sceneWidth - lBound - 25)) + lBound - 25;
-        var top =
-          Math.floor(Math.random() * (sceneHeight - sceneHeight * 0.3)) +
-          sceneHeight * 0.015;
-        starCoordinates.push({
+        const left =
+          Math.floor(Math.random() * (containerWidth - lBound - 25)) +
+          lBound -
+          25;
+        const top =
+          Math.floor(
+            Math.random() * (containerHeight - containerHeight * 0.3)
+          ) +
+          containerHeight * 0.015;
+        starCoordinates.value.push({
           color: starColor,
           left: `${left}px`,
           top: `${top}px`,
@@ -84,7 +89,10 @@ function rotateStars() {
   });
 }
 
-watchEffect(async () => {
+watch(async () => {
+  if (!starContainerRef.value) return;
+
+  await new Promise((r) => setTimeout(r, 300));
   await populateStars();
   easeInStars();
   rotateStars();
@@ -92,7 +100,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div>
+  <div class="star-container" ref="starContainerRef">
     <div
       v-if="starCoordinates.length"
       v-for="c in starCoordinates"
@@ -103,6 +111,12 @@ watchEffect(async () => {
 </template>
 
 <style lang="scss">
+.star-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .white-star {
   content: url("images/scenes/white-star.png");
   position: absolute;
