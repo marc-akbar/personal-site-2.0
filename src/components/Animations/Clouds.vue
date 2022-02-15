@@ -5,6 +5,11 @@ import { gsap } from "gsap";
 const leftCloud = ref(null);
 const sunCloud = ref(null);
 
+onMounted(async () => {
+  await easeInClouds();
+  raiseClouds();
+});
+
 function easeInClouds() {
   gsap.from([".left-cloud", ".right-cloud", ".sun-cloud"], {
     opacity: 0,
@@ -25,11 +30,6 @@ function raiseClouds() {
     duration: 2,
   });
 }
-
-onMounted(() => {
-  easeInClouds();
-  raiseClouds();
-});
 </script>
 
 <template>

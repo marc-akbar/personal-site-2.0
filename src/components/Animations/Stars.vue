@@ -6,6 +6,16 @@ const starContainerRef = ref(null);
 const starCoordinates = ref([]);
 const starColors = ["white-star", "gold-star", "teal-star"];
 
+watch(async () => {
+  if (!starContainerRef.value) return;
+
+  // wait for component to render container dimensions properly
+  await new Promise((r) => setTimeout(r, 300));
+  await populateStars();
+  easeInStars();
+  rotateStars();
+});
+
 function populateStars() {
   // Star population in scene
   const containerWidth = starContainerRef.value.offsetWidth;
@@ -88,15 +98,6 @@ function rotateStars() {
     ease: "none",
   });
 }
-
-watch(async () => {
-  if (!starContainerRef.value) return;
-
-  await new Promise((r) => setTimeout(r, 300));
-  await populateStars();
-  easeInStars();
-  rotateStars();
-});
 </script>
 
 <template>

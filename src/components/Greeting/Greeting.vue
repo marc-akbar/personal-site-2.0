@@ -1,5 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { gsap } from "gsap";
+
 import Hello from "components/Animations/Hello.vue";
 import Clouds from "components/Animations/Clouds.vue";
 import Stars from "components/Animations/Stars.vue";
@@ -8,6 +10,28 @@ import Particles from "components/Greeting/Particles.vue";
 const props = defineProps({
   darkMode: Boolean,
 });
+
+const timeline = gsap.timeline();
+
+onMounted(async () => {
+  await populateScene();
+});
+
+function populateScene() {
+  timeline
+    .from(".greeting-text", {
+      opacity: 0,
+      ease: "power2.in",
+      duration: 1,
+      delay: 2,
+    })
+    .from([".mountain-image"], {
+      opacity: 0,
+      ease: "none",
+      duration: 1,
+    })
+    .addLabel("runScene", "-=1");
+}
 </script>
 
 <template>
