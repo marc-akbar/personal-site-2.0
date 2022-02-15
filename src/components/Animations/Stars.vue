@@ -119,21 +119,21 @@ function rotateStars() {
 }
 
 .white-star {
-  content: url("images/scenes/white-star.png");
+  content: url("/images/scenes/white-star.png");
   position: absolute;
   height: 4px;
   z-index: 1;
 }
 
 .gold-star {
-  content: url("images/scenes/gold-star.png");
+  content: url("/images/scenes/gold-star.png");
   position: absolute;
   height: 8px;
   z-index: 1;
 }
 
 .teal-star {
-  content: url("images/scenes/teal-star.png");
+  content: url("/images/scenes/teal-star.png");
   position: absolute;
   height: 15px;
   z-index: 1;
