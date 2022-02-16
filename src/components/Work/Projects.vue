@@ -1,24 +1,30 @@
 <script setup>
 import { projectData } from "components/Work/projectData.js";
-
 import WiggleButton from "components/Buttons/WiggleButton.vue";
 </script>
 
 <template>
-  <div class="container" v-for="p in projectData">
-    <img class="image" :src="p.image.source" :alt="p.image.description" />
+  <div class="wrapper">
+    <div class="container" v-for="(p, index) in projectData">
+      <img
+        class="image"
+        :style="[index & 1 ? { order: 3 } : { order: 1 }]"
+        :src="p.image.source"
+        :alt="p.image.description"
+      />
 
-    <div class="gap" />
+      <div class="gap" />
 
-    <div>
-      <h4 class="title">{{ p.title }}</h4>
-      <h6 class="subtitle">{{ p.subtitle }}</h6>
-      <p class="description">
-        {{ p.description }}
-      </p>
-      <a v-for="l in p.links" class="link" target="_blank" :href="l.url">
-        <WiggleButton class="button" :label="l.label" />
-      </a>
+      <div :style="[index & 1 ? { order: 1 } : { order: 3 }]">
+        <h4 class="title">{{ p.title }}</h4>
+        <h6 class="subtitle">{{ p.subtitle }}</h6>
+        <p class="description">{{ p.description }}</p>
+        <div class="link-wrapper">
+          <a v-for="l in p.links" class="link" target="_blank" :href="l.url">
+            <WiggleButton class="button" :label="l.label" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,16 +32,22 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 <style lang="scss" scoped>
 @import "assets/palette.scss";
 
+.wrapper {
+  background-color: var(--eb-background);
+}
+
 .container {
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--eb-background);
 }
 
 .gap {
   padding-left: 5rem;
+  order: 2;
 }
 
 .image {
@@ -66,12 +78,17 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   font-weight: normal;
 }
 
+.link-wrapper {
+  display: flex;
+}
+
 .link {
   text-decoration: none;
 }
 
 .button {
   font-weight: bold;
+  margin-right: 0.5rem;
   background-color: var(--eb-btn);
   color: var(--eb-btn-text);
   padding: 1rem;

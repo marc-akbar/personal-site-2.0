@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Navigation from "components/Navigation/Navigation.vue";
+import Toggle from "components/Navigation/Toggle.vue";
 
 let darkMode = ref(false);
 
@@ -68,7 +69,8 @@ function toggleTime() {
   </head>
 
   <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
-    <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
+    <Toggle :darkMode="darkMode" @click="toggleTime" />
+    <Navigation />
     <RouterView :darkMode="darkMode" />
   </div>
 </template>

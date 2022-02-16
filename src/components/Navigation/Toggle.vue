@@ -26,7 +26,9 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .toggle-wrapper {
-  & input {
+  position: fixed;
+  z-index: 500;
+  input {
     display: none;
   }
 }

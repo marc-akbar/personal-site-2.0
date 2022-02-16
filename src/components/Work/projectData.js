@@ -15,4 +15,24 @@ export const projectData = [
       },
     ],
   },
+  {
+    title: "Trail Buddy",
+    subtitle: "GraphQL | Machine Learning",
+    description:
+      "A proof-of-concept app that predicts trail conditions based previous weather and soil data. This was built in 48 hours during a company hackathon at Viget. We used machine learning and 5 external APIs to create a GraphQL endpoint for the front end.",
+    image: {
+      source: "images/tb-image.png",
+      description: "trailbuddy homepage and graphql",
+    },
+    links: [
+      {
+        url: "https://heytrailbuddy.com/",
+        label: "WEBSITE",
+      },
+      {
+        url: "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/",
+        label: "READ MORE",
+      },
+    ],
+  },
 ];
