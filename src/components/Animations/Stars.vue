@@ -111,7 +111,7 @@ function rotateStars() {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .star-container {
   position: absolute;
   width: 100%;

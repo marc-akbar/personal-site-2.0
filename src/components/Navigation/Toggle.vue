@@ -24,7 +24,7 @@ const props = defineProps({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .toggle-wrapper {
   & input {
     display: none;

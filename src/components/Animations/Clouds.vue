@@ -40,7 +40,7 @@ function raiseClouds() {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .left-cloud {
   content: url("/images/scenes/cloud.png");
   position: absolute;

@@ -67,7 +67,7 @@ function toggleTime() {
     <title>Marc Akbar</title>
   </head>
 
-  <div class="wrapper" :class="darkMode ? 'night' : 'day'">
+  <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
     <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
     <RouterView :darkMode="darkMode" />
   </div>
@@ -77,6 +77,7 @@ function toggleTime() {
 @import "assets/palette.scss";
 
 body {
+  line-height: 1.5;
   margin: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -86,7 +87,7 @@ p {
   letter-spacing: 0.02857rem;
 }
 
-.wrapper {
+.app-wrapper {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;

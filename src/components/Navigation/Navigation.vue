@@ -24,7 +24,7 @@ const props = defineProps({
   </nav>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "assets/palette.scss";
 
 .nav-root {

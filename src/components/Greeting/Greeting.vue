@@ -35,7 +35,7 @@ function populateScene() {
 </script>
 
 <template>
-  <div id="scene">
+  <div class="greeting-scene">
     <Stars v-if="darkMode" />
     <Clouds v-else />
     <Particles />
@@ -54,10 +54,10 @@ function populateScene() {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "assets/palette.scss";
 
-#scene {
+.greeting-scene {
   position: relative;
   z-index: 0;
   background-color: var(--scene-background);
