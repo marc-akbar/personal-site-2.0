@@ -4,8 +4,8 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 </script>
 
 <template>
-  <div class="wrapper">
-    <div class="container" v-for="(p, index) in projectData">
+  <div :class="p.class" v-for="(p, index) in projectData">
+    <div class="container">
       <img
         class="image"
         :style="[index & 1 ? { order: 3 } : { order: 1 }]"
@@ -21,7 +21,7 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
         <p class="description">{{ p.description }}</p>
         <div class="link-wrapper">
           <a v-for="l in p.links" class="link" target="_blank" :href="l.url">
-            <WiggleButton class="button" :label="l.label" />
+            <WiggleButton class="btn" :label="l.label" />
           </a>
         </div>
       </div>
@@ -31,10 +31,6 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 
 <style lang="scss" scoped>
 @import "assets/palette.scss";
-
-.wrapper {
-  background-color: var(--eb-background);
-}
 
 .container {
   max-width: 1280px;
@@ -60,7 +56,6 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   font-family: "Baloo Tammudu 2", cursive, sans-serif;
   font-size: 2.2rem;
   font-weight: 200;
-  color: var(--eb-title);
 }
 
 .subtitle {
@@ -69,11 +64,9 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   font-weight: normal;
   padding-bottom: 1.25rem;
   letter-spacing: 0.0625rem;
-  color: var(--eb-subtitle);
 }
 
 .description {
-  color: var(--eb-text);
   font-size: 1rem;
   font-weight: normal;
 }
@@ -86,11 +79,99 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   text-decoration: none;
 }
 
-.button {
+.btn {
   font-weight: bold;
   margin-right: 0.5rem;
-  background-color: var(--eb-btn);
-  color: var(--eb-btn-text);
   padding: 1rem;
+}
+
+.earlybird {
+  background-color: var(--eb-background);
+
+  .title {
+    color: var(--eb-title);
+  }
+  .subtitle {
+    color: var(--eb-subtitle);
+  }
+  .description {
+    color: var(--eb-text);
+  }
+  .btn {
+    background-color: var(--eb-btn);
+    color: var(--eb-btn-text);
+  }
+}
+
+.trail-buddy {
+  background-color: var(--tb-background);
+
+  .title {
+    color: var(--tb-title);
+  }
+  .subtitle {
+    color: var(--tb-subtitle);
+  }
+  .description {
+    color: var(--tb-text);
+  }
+  .btn {
+    background-color: var(--tb-btn);
+    color: var(--tb-btn-text);
+  }
+}
+
+.finance {
+  background-color: var(--ft-background);
+
+  .title {
+    color: var(--ft-title);
+  }
+  .subtitle {
+    color: var(--ft-subtitle);
+  }
+  .description {
+    color: var(--ft-text);
+  }
+  .btn {
+    background-color: var(--ft-btn);
+    color: var(--ft-btn-text);
+  }
+}
+
+.weather {
+  background-color: var(--wb-background);
+
+  .title {
+    color: var(--wb-title);
+  }
+  .subtitle {
+    color: var(--wb-subtitle);
+  }
+  .description {
+    color: var(--wb-text);
+  }
+  .btn {
+    background-color: var(--wb-btn);
+    color: var(--wb-btn-text);
+  }
+}
+
+.personal {
+  background-color: var(--personal-background);
+
+  .title {
+    color: var(--personal-title);
+  }
+  .subtitle {
+    color: var(--personal-subtitle);
+  }
+  .description {
+    color: var(--personal-text);
+  }
+  .btn {
+    background-color: var(--personal-btn);
+    color: var(--personal-btn-text);
+  }
 }
 </style>
