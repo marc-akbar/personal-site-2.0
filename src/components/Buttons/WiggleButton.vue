@@ -1,16 +1,24 @@
 <script setup>
 const props = defineProps({
   label: String,
+  icon: String,
 });
 </script>
 
 <template>
   <button class="btn">
-    <span class="label">{{ label }}</span>
+    <span class="label"
+      ><i v-if="icon" class="material-icons icon">{{ icon }}</i
+      >{{ label }}</span
+    >
   </button>
 </template>
 
 <style lang="scss" scoped>
+.icon {
+  padding-right: 0.75rem;
+}
+
 .btn {
   position: relative;
   height: 36px;
@@ -39,6 +47,9 @@ const props = defineProps({
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 @keyframes rotate {
