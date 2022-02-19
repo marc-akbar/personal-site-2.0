@@ -6,32 +6,23 @@ const props = defineProps({
 </script>
 
 <template>
-  <button class="btn">
-    <span class="label"
-      ><i v-if="icon" class="material-icons icon">{{ icon }}</i
-      >{{ label }}</span
-    >
-  </button>
+  <div class="btn-wrapper">
+    <button class="btn">
+      <span class="label"
+        ><i v-if="icon" class="material-icons icon">{{ props.icon }}</i
+        >{{ props.label }}</span
+      >
+    </button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.icon {
-  padding-right: 0.75rem;
-}
-
-.btn {
-  position: relative;
-  height: 36px;
-  outline: none;
-  text-decoration: none;
+.btn-wrapper {
+  background-color: inherit;
+  color: rgba(0, 0, 0, 0.87);
   border: none;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  opacity: 1;
+  padding: 0.75rem 1rem;
 
   &:hover {
     animation: rotate 0.7s ease-in-out both;
@@ -41,6 +32,24 @@ const props = defineProps({
       animation-delay: 0.06s;
     }
   }
+}
+
+.btn {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 0.75rem;
 }
 
 .label {

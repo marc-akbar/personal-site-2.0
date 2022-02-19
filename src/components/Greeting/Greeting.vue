@@ -2,22 +2,24 @@
 import { ref, onMounted } from "vue";
 import { gsap } from "gsap";
 
-import Hello from "components/Animations/Hello.vue";
+import WelcomeTitle from "components/Greeting/WelcomeTitle.vue";
+import AboutTitle from "components/Greeting/AboutTitle.vue";
 import Clouds from "components/Animations/Clouds.vue";
 import Stars from "components/Animations/Stars.vue";
 import Particles from "components/Greeting/Particles.vue";
 
 const props = defineProps({
   darkMode: Boolean,
+  title: String,
 });
-
-const timeline = gsap.timeline();
 
 onMounted(async () => {
   await populateScene();
 });
 
 function populateScene() {
+  const timeline = gsap.timeline();
+
   timeline
     .from(".greeting-text", {
       opacity: 0,
@@ -36,14 +38,14 @@ function populateScene() {
 
 <template>
   <div class="greeting-scene">
-    <Stars v-if="darkMode" />
+    <Stars v-if="props.darkMode" />
     <Clouds v-else />
     <Particles />
 
     <div class="greeting-container">
       <div class="greeting-heading">
-        <div class="greeting-title"><Hello /></div>
-        <div class="greeting-text">I'm Marc, a web-based developer.</div>
+        <WelcomeTitle v-if="props.title === 'welcome'" />
+        <AboutTitle v-if="props.title === 'about'" />
       </div>
       <img
         class="mountain-image"
@@ -71,22 +73,7 @@ function populateScene() {
 .greeting-heading {
   position: relative;
   text-align: center;
-  margin-bottom: 7vw;
   z-index: 2;
-}
-
-.greeting-title {
-  position: relative;
-  margin-bottom: 4vw;
-  z-index: 2;
-}
-
-.greeting-text {
-  position: relative;
-  font-family: "Baloo Tammudu 2", cursive, sans-serif;
-  font-size: 2.25rem;
-  z-index: 2;
-  color: var(--greeting-text);
 }
 
 .mountain-image {

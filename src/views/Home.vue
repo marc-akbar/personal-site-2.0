@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <Greeting :darkMode="darkMode" />
+  <Greeting :darkMode="props.darkMode" title="welcome" />
   <Work />
-  <Contact :darkMode="darkMode" />
+  <Contact :darkMode="props.darkMode" />
 </template>

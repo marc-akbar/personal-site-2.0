@@ -13,13 +13,15 @@ const props = defineProps({
       I don't bite and would love to chat. Feel free to reach out.
     </p>
 
-    <a href="mailto:marc.akbar@gmail.com" class="footer-link">
-      <WiggleButton class="footer-btn" label="MESSAGE ME" icon="mail" />
-    </a>
+    <div class="footer-link-wrapper">
+      <a href="mailto:marc.akbar@gmail.com" class="footer-link">
+        <WiggleButton class="footer-btn" label="MESSAGE ME" icon="mail" />
+      </a>
+    </div>
 
-    <div v-if="!darkMode" class="left-cloud" ref="leftCloud" />
-    <div v-if="!darkMode" class="right-cloud" ref="rightCloud" />
-    <div v-if="!darkMode" class="sun-cloud" ref="sunCloud" />
+    <div v-if="!props.darkMode" class="left-cloud" ref="leftCloud" />
+    <div v-if="!props.darkMode" class="right-cloud" ref="rightCloud" />
+    <div v-if="!props.darkMode" class="sun-cloud" ref="sunCloud" />
   </section>
 </template>
 
@@ -52,9 +54,9 @@ const props = defineProps({
   z-index: 1;
 }
 
-.footer-link {
-  text-decoration: none;
-  display: inline-block;
+.footer-link-wrapper {
+  width: fit-content;
+  margin: auto;
   z-index: 1;
 }
 
@@ -62,12 +64,9 @@ const props = defineProps({
   background-color: $btn-color;
   font-weight: bold;
   letter-spacing: 0.0625rem;
-  padding: 1.75rem 2.25rem;
+  padding: 1.25rem 2.25rem;
   z-index: 1;
-
-  .btn span {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
 }
 
 .left-cloud {

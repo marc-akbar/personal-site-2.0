@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import Hello from "components/Animations/Hello.vue";
 </script>
 
 <template>
@@ -48,7 +47,6 @@ import Hello from "components/Animations/Hello.vue";
   font-family: "Baloo Tammudu 2", cursive, sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
-  text-decoration: none;
   text-transform: uppercase;
   transition: color 0.5s ease, background-color 0.5s ease;
   color: var(--nav-btn);

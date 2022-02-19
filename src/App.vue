@@ -89,6 +89,10 @@ p {
   letter-spacing: 0.02857rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .app-wrapper {
   min-height: 100vh;
   position: relative;

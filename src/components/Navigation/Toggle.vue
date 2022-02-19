@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
   <div class="toggle-wrapper">
-    <input type="checkbox" class="dn" v-bind:checked="darkMode" />
+    <input type="checkbox" class="dn" v-bind:checked="props.darkMode" />
     <label for="dn" class="toggle">
       <span class="toggle__handler">
         <span class="crater crater--1"></span>

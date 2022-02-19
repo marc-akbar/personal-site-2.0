@@ -20,7 +20,7 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
         <h6 class="subtitle">{{ p.subtitle }}</h6>
         <p class="description">{{ p.description }}</p>
         <div class="link-wrapper">
-          <a v-for="l in p.links" class="link" target="_blank" :href="l.url">
+          <a v-for="l in p.links" target="_blank" :href="l.url">
             <WiggleButton class="btn" :label="l.label" />
           </a>
         </div>
@@ -75,14 +75,9 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   display: flex;
 }
 
-.link {
-  text-decoration: none;
-}
-
 .btn {
   font-weight: bold;
   margin-right: 0.5rem;
-  padding: 1rem;
 }
 
 .earlybird {

@@ -41,6 +41,5 @@
 
 .recent-work-link {
   color: $custom-teal;
-  text-decoration: none;
 }
 </style>
