@@ -81,7 +81,7 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 .earlybird {
   background-color: var(--eb-background);
 
-  .title {
+  .project-title {
     color: var(--eb-title);
   }
   .subtitle {
@@ -99,16 +99,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 .trail-buddy {
   background-color: var(--tb-background);
 
-  .title {
+  .project-title {
     color: var(--tb-title);
   }
-  .subtitle {
+  .project-subtitle {
     color: var(--tb-subtitle);
   }
-  .description {
+  .project-description {
     color: var(--tb-text);
   }
-  .btn {
+  .project-btn {
     background-color: var(--tb-btn);
     color: var(--tb-btn-text);
   }
@@ -117,16 +117,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 .finance {
   background-color: var(--ft-background);
 
-  .title {
+  .project-title {
     color: var(--ft-title);
   }
-  .subtitle {
+  .project-subtitle {
     color: var(--ft-subtitle);
   }
-  .description {
+  .project-description {
     color: var(--ft-text);
   }
-  .btn {
+  .project-btn {
     background-color: var(--ft-btn);
     color: var(--ft-btn-text);
   }
@@ -135,16 +135,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 .weather {
   background-color: var(--wb-background);
 
-  .title {
+  .project-title {
     color: var(--wb-title);
   }
-  .subtitle {
+  .project-subtitle {
     color: var(--wb-subtitle);
   }
-  .description {
+  .project-description {
     color: var(--wb-text);
   }
-  .btn {
+  .project-btn {
     background-color: var(--wb-btn);
     color: var(--wb-btn-text);
   }
@@ -153,16 +153,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 .personal {
   background-color: var(--personal-background);
 
-  .title {
+  .project-title {
     color: var(--personal-title);
   }
-  .subtitle {
+  .project-subtitle {
     color: var(--personal-subtitle);
   }
-  .description {
+  .project-description {
     color: var(--personal-text);
   }
-  .btn {
+  .project-btn {
     background-color: var(--personal-btn);
     color: var(--personal-btn-text);
   }
