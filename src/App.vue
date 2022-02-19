@@ -69,8 +69,7 @@ function toggleTime() {
   </head>
 
   <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
-    <Toggle :darkMode="darkMode" @click="toggleTime" />
-    <Navigation />
+    <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
     <RouterView :darkMode="darkMode" />
   </div>
 </template>

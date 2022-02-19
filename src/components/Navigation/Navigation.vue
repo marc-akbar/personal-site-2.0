@@ -1,12 +1,21 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import Toggle from "components/Navigation/Toggle.vue";
+
+const props = defineProps({
+  darkMode: Boolean,
+  toggleTime: Function,
+});
 </script>
 
 <template>
   <nav class="nav-root">
     <div class="nav-container">
       <div class="nav-wrapper">
-        <div />
+        <div class="nav-toggle">
+          <Toggle :darkMode="props.darkMode" @click="props.toggleTime" />
+        </div>
+
         <div class="nav-links">
           <RouterLink class="nav-link" to="/">home</RouterLink>
           <RouterLink class="nav-link" to="/about">about</RouterLink>
@@ -24,19 +33,24 @@ import { RouterLink } from "vue-router";
 }
 
 .nav-container {
-  margin: 0 auto;
+  height: 64px;
   padding: 0.5rem;
-  max-width: 1280px;
 }
 
 .nav-wrapper {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.nav-toggle {
+  height: 100%;
+  position: relative;
+}
+
 .nav-links {
-  padding-right: 1rem;
+  padding-right: 15vw;
 }
 
 .nav-link {
