@@ -5,23 +5,23 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 
 <template>
   <div :class="p.class" v-for="(p, index) in projectData">
-    <div class="container">
+    <div class="project-container container">
       <img
-        class="image"
+        class="project-image"
         :style="[index & 1 ? { order: 3 } : { order: 1 }]"
         :src="p.image.source"
         :alt="p.image.description"
       />
 
-      <div class="gap" />
+      <div class="project-gap" />
 
       <div :style="[index & 1 ? { order: 1 } : { order: 3 }]">
-        <h4 class="title">{{ p.title }}</h4>
-        <h6 class="subtitle">{{ p.subtitle }}</h6>
-        <p class="description">{{ p.description }}</p>
-        <div class="link-wrapper">
+        <h4 class="project-title">{{ p.title }}</h4>
+        <h6 class="project-subtitle">{{ p.subtitle }}</h6>
+        <p class="project-description">{{ p.description }}</p>
+        <div class="project-link-wrapper">
           <a v-for="l in p.links" target="_blank" :href="l.url">
-            <WiggleButton class="btn" :label="l.label" />
+            <WiggleButton class="project-btn" :label="l.label" />
           </a>
         </div>
       </div>
@@ -32,33 +32,31 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 <style lang="scss" scoped>
 @import "assets/palette.scss";
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
+.project-container {
   padding: 7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.gap {
+.project-gap {
   padding-left: 5rem;
   order: 2;
 }
 
-.image {
+.project-image {
   max-width: 60%;
   min-width: 313px;
 }
 
-.title {
+.project-title {
   margin: 0;
   font-family: "Baloo Tammudu 2", cursive, sans-serif;
   font-size: 2.2rem;
   font-weight: 200;
 }
 
-.subtitle {
+.project-subtitle {
   margin: 0;
   font-size: 1.1rem;
   font-weight: normal;
@@ -66,16 +64,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   letter-spacing: 0.0625rem;
 }
 
-.description {
+.project-description {
   font-size: 1rem;
   font-weight: normal;
 }
 
-.link-wrapper {
+.project-link-wrapper {
   display: flex;
 }
 
-.btn {
+.project-btn {
   font-weight: bold;
   margin-right: 0.5rem;
 }

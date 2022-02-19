@@ -100,4 +100,9 @@ a {
   background-color: var(--background);
   transition: color 0.5s ease, background-color 0.5s ease;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
 </style>

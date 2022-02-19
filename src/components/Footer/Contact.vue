@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <section class="container">
+  <section class="footer-container">
     <h4 class="footer-title">Say hi.</h4>
     <p class="footer-text">
       I don't bite and would love to chat. Feel free to reach out.
@@ -28,7 +28,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 @import "assets/palette.scss";
 
-.container {
+.footer-container {
   position: relative;
   margin: 0;
   padding-top: 7rem;

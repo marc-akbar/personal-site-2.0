@@ -7,7 +7,7 @@ const sunCloud = ref(null);
 
 onMounted(async () => {
   await easeInClouds();
-  raiseClouds();
+  await raiseClouds();
 });
 
 function easeInClouds() {

@@ -16,7 +16,7 @@ const props = defineProps({
           <Toggle :darkMode="props.darkMode" @click="props.toggleTime" />
         </div>
 
-        <div class="nav-links">
+        <div>
           <RouterLink class="nav-link" to="/">home</RouterLink>
           <RouterLink class="nav-link" to="/about">about</RouterLink>
         </div>
@@ -47,10 +47,6 @@ const props = defineProps({
 .nav-toggle {
   height: 100%;
   position: relative;
-}
-
-.nav-links {
-  padding-right: 15vw;
 }
 
 .nav-link {

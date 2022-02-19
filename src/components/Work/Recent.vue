@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="recent-work-container">
     <h2 class="recent-work-header">What I've been working on.</h2>
     <p class="recent-work-text">
       Here's some of my recent work. To see more visit me on
@@ -16,7 +16,7 @@
 <style lang="scss" scoped>
 @import "assets/palette.scss";
 
-.container {
+.recent-work-container {
   margin: 0;
   padding-top: 7rem;
   padding-bottom: 7rem;

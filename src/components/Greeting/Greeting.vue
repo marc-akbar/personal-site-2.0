@@ -42,7 +42,7 @@ function populateScene() {
     <Clouds v-else />
     <Particles />
 
-    <div class="greeting-container">
+    <div class="container">
       <div class="greeting-heading">
         <WelcomeTitle v-if="props.title === 'welcome'" />
         <AboutTitle v-if="props.title === 'about'" />
@@ -63,11 +63,6 @@ function populateScene() {
   position: relative;
   z-index: 0;
   background-color: var(--scene-background);
-}
-
-.greeting-container {
-  margin: 0 auto;
-  max-width: 1280px;
 }
 
 .greeting-heading {

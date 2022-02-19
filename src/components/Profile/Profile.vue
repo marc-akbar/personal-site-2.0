@@ -5,7 +5,7 @@ import Social from "components/Profile/Social.vue";
 </script>
 
 <template>
-  <section class="container">
+  <section class="profile-container container">
     <div class="photo-resume">
       <img class="photo" src="images/profile-photo.png" alt="profile picture" />
       <div class="resume-link-wrapper">
@@ -20,34 +20,34 @@ import Social from "components/Profile/Social.vue";
       </div>
     </div>
 
-    <div class="profile">
-      <div class="profile-section">
-        <h5 class="profile-title">I write code and climb rocks.</h5>
-        <p class="profile-text">I live in <del>New York</del></p>
-        <p class="profile-text"><del class="profile-fl">Florida</del></p>
-        <p class="profile-text">
-          <del class="profile-ny">New York</del>
+    <div class="bio">
+      <div class="bio-section">
+        <h5 class="bio-title">I write code and climb rocks.</h5>
+        <p class="bio-text">I live in <del>New York</del></p>
+        <p class="bio-text"><del class="bio-fl">Florida</del></p>
+        <p class="bio-text">
+          <del class="bio-ny">New York</del>
         </p>
-        <p class="profile-text profile-co">Colorado.</p>
+        <p class="bio-text bio-co">Colorado.</p>
       </div>
-      <div class="profile-section">
-        <p class="profile-text">
+      <div class="bio-section">
+        <p class="bio-text">
           I have a passion for functional design and data and use this space to
           showcase current / past projects. Outside of tech, these designs come
           in the form of
           <a
-            class="profile-link"
+            class="bio-link"
             href="https://thecliffsclimbing.com/blog/2016/6/24/meet-the-new-setters-marc-and-bo"
             target="_blank"
             >routesetting</a
           >.
         </p>
       </div>
-      <div class="profile-section">
-        <p class="profile-text">
+      <div class="bio-section">
+        <p class="bio-text">
           Check out my
-          <RouterLink class="profile-link" to="/#work">work</RouterLink> or find
-          me through the social links below.
+          <RouterLink class="bio-link" to="/#work">work</RouterLink> or find me
+          through the social links below.
         </p>
       </div>
       <Social />
@@ -58,9 +58,7 @@ import Social from "components/Profile/Social.vue";
 <style lang="scss" scoped>
 @import "assets/palette.scss";
 
-.container {
-  margin: 0 auto;
-  max-width: 1280px;
+.profile-container {
   padding-top: 4rem;
   padding-bottom: 4rem;
   display: flex;
@@ -89,15 +87,15 @@ import Social from "components/Profile/Social.vue";
   color: var(--wb-btn-text);
 }
 
-.profile {
+.bio {
   width: 75%;
 }
 
-.profile-section {
+.bio-section {
   padding-bottom: 2rem;
 }
 
-.profile-title {
+.bio-title {
   margin: 0;
   font-family: "Baloo Tammudu 2", cursive, sans-serif;
   font-size: 1.75rem;
@@ -106,26 +104,26 @@ import Social from "components/Profile/Social.vue";
   color: var(--about-title);
 }
 
-.profile-text {
+.bio-text {
   margin: 0;
   font-size: 1.25rem;
   font-weight: normal;
   color: var(--about-text);
 }
 
-.profile-link {
+.bio-link {
   color: $custom-teal;
 }
 
-.profile-fl {
+.bio-fl {
   padding-left: 100px;
 }
 
-.profile-ny {
+.bio-ny {
   padding-left: 140px;
 }
 
-.profile-co {
+.bio-co {
   padding-left: 190px;
 }
 </style>
