@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gsap": "^3.9.1",
+    "nes.css": "^2.3.0",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },
