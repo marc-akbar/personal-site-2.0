@@ -84,13 +84,13 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
   .project-title {
     color: var(--eb-title);
   }
-  .subtitle {
+  .project-subtitle {
     color: var(--eb-subtitle);
   }
-  .description {
+  .project-description {
     color: var(--eb-text);
   }
-  .btn {
+  .project-btn {
     background-color: var(--eb-btn);
     color: var(--eb-btn-text);
   }
