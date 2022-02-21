@@ -72,7 +72,7 @@ import Social from "components/Profile/Social.vue";
 }
 
 .photo {
-  width: 50%;
+  width: 65%;
   min-width: 313px;
   padding-bottom: 2rem;
 }

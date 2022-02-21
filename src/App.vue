@@ -4,6 +4,7 @@ import Navigation from "components/Navigation/Navigation.vue";
 import Toggle from "components/Navigation/Toggle.vue";
 
 let darkMode = ref(false);
+let theme = ref("nes");
 
 const storedDarkMode = localStorage.getItem("darkMode");
 if (!storedDarkMode) {
@@ -65,23 +66,31 @@ function toggleTime() {
       href="//fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&family=Satisfy&display=swap"
       rel="stylesheet"
     />
+    <!-- NES.css -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+
     <title>Marc Akbar</title>
   </head>
 
-  <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
-    <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
-    <RouterView :darkMode="darkMode" />
-  </div>
+  <body :class="theme">
+    <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
+      <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
+      <RouterView :darkMode="darkMode" />
+    </div>
+  </body>
 </template>
 
 <style lang="scss">
+@import "../node_modules/nes.css/css/nes.css";
+@import "assets/themes.scss";
 @import "assets/palette.scss";
 
+html,
 body {
-  line-height: 1.5;
   margin: 0 !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 p {
@@ -104,5 +113,6 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1280px;
+  width: 90%;
 }
 </style>
