@@ -4,7 +4,7 @@ import Navigation from "components/Navigation/Navigation.vue";
 import Toggle from "components/Navigation/Toggle.vue";
 
 let darkMode = ref(false);
-let theme = ref("nes");
+let theme = ref("default");
 
 const storedDarkMode = localStorage.getItem("darkMode");
 if (!storedDarkMode) {

@@ -1,8 +1,12 @@
+<script setup>
+import Typography from "components/Typography/Typography.vue";
+</script>
+
 <template>
   <section class="recent-work-container">
-    <div class="recent-work-header">
-      <span class="nes-text">What I've been working on.</span>
-    </div>
+    <Typography class="recent-work-header">
+      What I've been working on.
+    </Typography>
     <div class="recent-work-text nes-text">
       Here's some of my recent work. To see more visit me on
       <a
