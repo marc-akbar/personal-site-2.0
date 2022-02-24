@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Navigation from "components/Navigation/Navigation.vue";
-import Toggle from "components/Navigation/Toggle.vue";
+import Sidenav from "components/Navigation/Sidenav.vue";
 
 let darkMode = ref(false);
 let theme = ref("default");
@@ -18,6 +18,10 @@ function toggleTime() {
   const newValue = !darkMode.value;
   darkMode.value = newValue;
   localStorage.setItem("darkMode", newValue ? "TRUE" : "FALSE");
+}
+
+function changeTheme(newTheme) {
+  theme.value = newTheme;
 }
 </script>
 
@@ -77,8 +81,12 @@ function toggleTime() {
 
   <body :class="theme">
     <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
-      <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
-      <RouterView :darkMode="darkMode" />
+      <Sidenav :changeTheme="changeTheme" />
+
+      <div class="app-content">
+        <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
+        <RouterView :darkMode="darkMode" />
+      </div>
     </div>
   </body>
 </template>
@@ -108,6 +116,10 @@ a {
   overflow-y: hidden;
   background-color: var(--background);
   transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.app-content {
+  padding-left: 3rem;
 }
 
 .container {
