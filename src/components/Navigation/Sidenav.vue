@@ -26,13 +26,21 @@ const props = defineProps({
 .btn {
   width: 3rem;
   height: 100%;
+  cursor: inherit;
+  transition: all 0.25s ease-in-out;
 }
 
 .default {
-  background-color: $day-scene-background;
+  background-color: var(--background);
+}
+.default:hover {
+  filter: brightness(120%);
 }
 
 .nes {
   background-color: #209cee;
+}
+.nes:hover {
+  filter: brightness(120%);
 }
 </style>

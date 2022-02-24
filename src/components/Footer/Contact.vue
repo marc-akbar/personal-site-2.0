@@ -1,5 +1,6 @@
 <script setup>
 import WiggleButton from "components/Buttons/WiggleButton.vue";
+import Typography from "components/Typography/Typography.vue";
 
 const props = defineProps({
   darkMode: Boolean,
@@ -8,10 +9,12 @@ const props = defineProps({
 
 <template>
   <section class="footer-container">
-    <h4 class="footer-title">Say hi.</h4>
-    <p class="footer-text">
+    <Typography class="footer-title cursive-font" variant="h1"
+      >Say hi.</Typography
+    >
+    <Typography class="footer-text" variant="h4">
       I don't bite and would love to chat. Feel free to reach out.
-    </p>
+    </Typography>
 
     <div class="footer-link-wrapper">
       <a href="mailto:marc.akbar@gmail.com" class="footer-link">
@@ -40,15 +43,12 @@ const props = defineProps({
 
 .footer-title {
   margin: 0;
-  font-size: 5rem;
-  font-family: "Satisfy", cursive, sans-serif;
-  font-weight: 200;
-  color: var(--footer-title);
   z-index: 1;
+  padding-bottom: 1rem;
+  color: var(--footer-title);
 }
 
 .footer-text {
-  font-size: 1.75rem;
   padding-bottom: 1rem;
   color: var(--footer-text);
   z-index: 1;

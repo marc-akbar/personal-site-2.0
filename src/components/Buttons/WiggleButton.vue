@@ -1,4 +1,6 @@
 <script setup>
+import Typography from "components/Typography/Typography.vue";
+
 const props = defineProps({
   label: String,
   icon: String,
@@ -8,10 +10,12 @@ const props = defineProps({
 <template>
   <div class="btn-wrapper">
     <button class="btn">
-      <span class="label"
-        ><i v-if="icon" class="material-icons icon">{{ props.icon }}</i
-        >{{ props.label }}</span
-      >
+      <Typography>
+        <div class="label">
+          <i v-if="icon" class="material-icons icon">{{ props.icon }}</i>
+          {{ props.label }}
+        </div>
+      </Typography>
     </button>
   </div>
 </template>
@@ -53,7 +57,6 @@ const props = defineProps({
 }
 
 .label {
-  font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.5px;
   display: flex;

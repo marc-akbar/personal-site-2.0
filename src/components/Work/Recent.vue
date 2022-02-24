@@ -4,10 +4,10 @@ import Typography from "components/Typography/Typography.vue";
 
 <template>
   <section class="recent-work-container">
-    <Typography class="recent-work-header">
+    <Typography class="recent-work-header cursive-font" variant="h1">
       What I've been working on.
     </Typography>
-    <div class="recent-work-text nes-text">
+    <Typography class="recent-work-text" variant="h4">
       Here's some of my recent work. To see more visit me on
       <a
         class="recent-work-link"
@@ -15,7 +15,7 @@ import Typography from "components/Typography/Typography.vue";
         target="_blank"
         >Github</a
       >.
-    </div>
+    </Typography>
   </section>
 </template>
 
@@ -31,15 +31,12 @@ import Typography from "components/Typography/Typography.vue";
 }
 
 .recent-work-header {
-  font-weight: 400;
   margin: 0;
   padding-bottom: 2rem;
   color: var(--recent-work-title);
 }
 
 .recent-work-text {
-  letter-spacing: 0.02rem;
-  font-size: 1.4rem;
   color: var(--recent-work-text);
 }
 

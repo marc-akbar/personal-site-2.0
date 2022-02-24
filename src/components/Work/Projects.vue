@@ -1,5 +1,6 @@
 <script setup>
 import { projectData } from "components/Work/projectData.js";
+import Typography from "components/Typography/Typography.vue";
 import WiggleButton from "components/Buttons/WiggleButton.vue";
 </script>
 
@@ -16,9 +17,15 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
       <div class="project-gap" />
 
       <div :style="[index & 1 ? { order: 1 } : { order: 3 }]">
-        <h4 class="project-title">{{ p.title }}</h4>
-        <h6 class="project-subtitle">{{ p.subtitle }}</h6>
-        <p class="project-description">{{ p.description }}</p>
+        <Typography class="project-title bamboo-font" variant="h2">
+          {{ p.title }}
+        </Typography>
+        <Typography class="project-subtitle" variant="h4">
+          {{ p.subtitle }}
+        </Typography>
+        <Typography class="project-description" variant="h5">
+          {{ p.description }}
+        </Typography>
         <div class="project-link-wrapper">
           <a v-for="l in p.links" target="_blank" :href="l.url">
             <WiggleButton class="project-btn" :label="l.label" />
@@ -51,22 +58,16 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 
 .project-title {
   margin: 0;
-  font-family: "Baloo Tammudu 2", cursive, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 200;
 }
 
 .project-subtitle {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: normal;
   padding-bottom: 1.25rem;
   letter-spacing: 0.0625rem;
 }
 
 .project-description {
-  font-size: 1rem;
-  font-weight: normal;
+  padding-bottom: 1rem;
 }
 
 .project-link-wrapper {

@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import Typography from "components/Typography/Typography.vue";
+
 import WiggleButton from "components/Buttons/WiggleButton.vue";
 import Social from "components/Profile/Social.vue";
 </script>
@@ -22,16 +24,22 @@ import Social from "components/Profile/Social.vue";
 
     <div class="bio">
       <div class="bio-section">
-        <h5 class="bio-title">I write code and climb rocks.</h5>
-        <p class="bio-text">I live in <del>New York</del></p>
-        <p class="bio-text"><del class="bio-fl">Florida</del></p>
-        <p class="bio-text">
+        <Typography class="bio-title bamboo-font" variant="h4"
+          >I write code and climb rocks.</Typography
+        >
+        <Typography class="bio-text" variant="h5"
+          >I live in <del>New York</del></Typography
+        >
+        <Typography class="bio-text" variant="h5"
+          ><del class="bio-fl">Florida</del></Typography
+        >
+        <Typography class="bio-text" variant="h5">
           <del class="bio-ny">New York</del>
-        </p>
-        <p class="bio-text bio-co">Colorado.</p>
+        </Typography>
+        <Typography class="bio-text bio-co" variant="h5">Colorado.</Typography>
       </div>
       <div class="bio-section">
-        <p class="bio-text">
+        <Typography class="bio-text" variant="h5">
           I have a passion for functional design and data and use this space to
           showcase current / past projects. Outside of tech, these designs come
           in the form of
@@ -41,14 +49,14 @@ import Social from "components/Profile/Social.vue";
             target="_blank"
             >routesetting</a
           >.
-        </p>
+        </Typography>
       </div>
       <div class="bio-section">
-        <p class="bio-text">
+        <Typography class="bio-text" variant="h5">
           Check out my
           <RouterLink class="bio-link" to="/#work">work</RouterLink> or find me
           through the social links below.
-        </p>
+        </Typography>
       </div>
       <Social />
     </div>
@@ -97,8 +105,6 @@ import Social from "components/Profile/Social.vue";
 
 .bio-title {
   margin: 0;
-  font-family: "Baloo Tammudu 2", cursive, sans-serif;
-  font-size: 1.75rem;
   text-transform: uppercase;
   padding-bottom: 2rem;
   color: var(--about-title);
@@ -106,8 +112,6 @@ import Social from "components/Profile/Social.vue";
 
 .bio-text {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: normal;
   color: var(--about-text);
 }
 
@@ -116,14 +120,14 @@ import Social from "components/Profile/Social.vue";
 }
 
 .bio-fl {
-  padding-left: 100px;
+  padding-left: 7rem;
 }
 
 .bio-ny {
-  padding-left: 140px;
+  padding-left: 10rem;
 }
 
 .bio-co {
-  padding-left: 190px;
+  padding-left: 13rem;
 }
 </style>

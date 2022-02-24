@@ -79,7 +79,7 @@ function changeTheme(newTheme) {
     <title>Marc Akbar</title>
   </head>
 
-  <body :class="theme">
+  <body class="shared" :class="theme">
     <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
       <Sidenav :changeTheme="changeTheme" />
 
@@ -93,6 +93,7 @@ function changeTheme(newTheme) {
 
 <style lang="scss">
 @import "../node_modules/nes.css/css/nes.css";
+@import "assets/shared.scss";
 @import "assets/themes.scss";
 @import "assets/palette.scss";
 
@@ -100,11 +101,6 @@ html,
 body {
   margin: 0 !important;
 }
-
-p {
-  letter-spacing: 0.02857rem;
-}
-
 a {
   text-decoration: none;
 }
@@ -120,11 +116,5 @@ a {
 
 .app-content {
   padding-left: 3rem;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1280px;
-  width: 90%;
 }
 </style>
