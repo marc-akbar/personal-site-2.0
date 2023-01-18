@@ -4,22 +4,16 @@ import FillIconButton from "components/Buttons/FillIconButton.vue";
 
 <template>
   <div class="social">
-    <FillIconButton href="https://github.com/marc-akbar" class="social-item"
-      ><img class="social-image" src="public/images/logos/GitHub-logo.png" />
+    <FillIconButton href="https://github.com/marc-akbar" class="social-item">
+      <img class="social-image" src="public/images/logos/GitHub-logo.png" />
     </FillIconButton>
 
-    <FillIconButton class="social-item"
-      ><img class="social-image" src="public/images/logos/LinkedIn-logo.png" />
+    <FillIconButton href="https://www.linkedin.com/in/marc-akbar/" class="social-item">
+      <img class="social-image" src="public/images/logos/LinkedIn-logo.png" />
     </FillIconButton>
 
-    <FillIconButton href="https://twitter.com/snack_bar13" class="social-item"
-      ><img class="social-image" src="public/images/logos/Twitter-logo.png" />
-    </FillIconButton>
-
-    <FillIconButton
-      href="https://www.instagram.com/snack_bar13/"
-      class="social-item"
-      ><img class="social-image" src="public/images/logos/Instagram-logo.png" />
+    <FillIconButton href="https://www.instagram.com/snack_bar13/" class="social-item">
+      <img class="social-image" src="public/images/logos/Instagram-logo.png" />
     </FillIconButton>
   </div>
 </template>
