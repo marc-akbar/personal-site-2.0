@@ -1,10 +1,13 @@
-# personal-site-2.0
+<p align="center">
+  <img alt="Mountain Logo" src="public/images/scenes/mountain-range.png" width="200" />
+</p>
+<h1 align="center">
+  <a href="https://marcakbar.dev">marcakbar.dev</a>
+</h1>
+<br/>
+Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
 
 ## Customize configuration
 
