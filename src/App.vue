@@ -31,22 +31,13 @@ function changeTheme(newTheme) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="author" content="Marc Akbar" />
-    <meta
-      name="description"
-      content="I'm Marc. I write code and climb rocks."
-    />
-    <meta
-      name="keywords"
-      content="marc, akbar, marc akbar, developer, web development, software engineer, design"
-    />
+    <meta name="description" content="I'm Marc. I write code and climb rocks." />
+    <meta name="keywords" content="marc, akbar, marc akbar, developer, web development, software engineer, design" />
 
     <meta property="og:title" content="Marc Akbar" />
     <meta property="og:description" content="Portfolio site for Marc Akbar." />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="www.marcakbar.dev/images/card-image.png"
-    />
+    <meta property="og:image" content="www.marcakbar.dev/images/card-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://www.marcakbar.dev/" />
@@ -54,22 +45,13 @@ function changeTheme(newTheme) {
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@snack_bar13" />
-    <meta
-      name="twitter:image"
-      content="https://www.marcakbar.dev/images/card-image.png"
-    />
+    <meta name="twitter:image" content="https://www.marcakbar.dev/images/card-image.png" />
     <meta name="twitter:image:alt" content="Home page in day and night" />
 
     <!-- Import Google Icon Font -->
-    <link
-      href="//fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link
-      href="//fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&family=Satisfy&display=swap"
-      rel="stylesheet"
-    />
+    <link href="//fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&family=Satisfy&display=swap" rel="stylesheet" />
     <!-- NES.css -->
     <link
       href="https://fonts.googleapis.com/css?family=Press+Start+2P"
@@ -81,7 +63,7 @@ function changeTheme(newTheme) {
 
   <body class="shared" :class="theme">
     <div class="app-wrapper" :class="darkMode ? 'night' : 'day'">
-      <Sidenav :changeTheme="changeTheme" />
+      <!-- <Sidenav :changeTheme="changeTheme" /> -->
 
       <div class="app-content">
         <Navigation :darkMode="darkMode" :toggleTime="toggleTime" />
@@ -114,7 +96,7 @@ a {
   transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.app-content {
-  padding-left: 3rem;
-}
+// .app-content {
+//   padding-left: 3rem;
+// }
 </style>
