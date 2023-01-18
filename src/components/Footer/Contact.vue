@@ -70,7 +70,7 @@ const props = defineProps({
 }
 
 .left-cloud {
-  content: url("images/scenes/cloud.png");
+  content: url("public/images/scenes/cloud.png");
   position: absolute;
   left: 10%;
   top: 42%;
@@ -78,7 +78,7 @@ const props = defineProps({
 }
 
 .right-cloud {
-  content: url("images/scenes/cloud.png");
+  content: url("public/images/scenes/cloud.png");
   position: absolute;
   left: 70%;
   top: 12%;
@@ -86,7 +86,7 @@ const props = defineProps({
 }
 
 .sun-cloud {
-  content: url("images/scenes/sun-cloud.png");
+  content: url("public/images/scenes/sun-cloud.png");
   position: absolute;
   left: 57%;
   top: 57%;

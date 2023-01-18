@@ -9,7 +9,7 @@ import Social from "components/Profile/Social.vue";
 <template>
   <section class="profile-container container">
     <div class="photo-resume">
-      <img class="photo" src="images/profile-photo.png" alt="profile picture" />
+      <img class="photo" src="public/images/profile-photo.png" alt="profile picture" />
       <div class="resume-link-wrapper">
         <a
           class="resume-link"

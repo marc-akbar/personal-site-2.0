@@ -49,7 +49,7 @@ function populateScene() {
       </div>
       <img
         class="mountain-image"
-        src="images/scenes/mountain-range.png"
+        src="public/images/scenes/mountain-range.png"
         alt="mountain range graphic"
       />
     </div>

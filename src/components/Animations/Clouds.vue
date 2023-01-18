@@ -42,7 +42,7 @@ function raiseClouds() {
 
 <style lang="scss" scoped>
 .left-cloud {
-  content: url("/images/scenes/cloud.png");
+  content: url("public/images/scenes/cloud.png");
   position: absolute;
   left: 5%;
   top: 30%;
@@ -50,7 +50,7 @@ function raiseClouds() {
 }
 
 .right-cloud {
-  content: url("/images/scenes/cloud.png");
+  content: url("public/images/scenes/cloud.png");
   position: absolute;
   left: 25%;
   top: 52%;
@@ -58,7 +58,7 @@ function raiseClouds() {
 }
 
 .sun-cloud {
-  content: url("/images/scenes/sun-cloud.png");
+  content: url("public/images/scenes/sun-cloud.png");
   position: absolute;
   left: 65%;
   top: 17%;
