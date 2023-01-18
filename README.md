@@ -5,7 +5,7 @@
   <a href="https://marcakbar.dev">marcakbar.dev</a>
 </h1>
 <br/>
-Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
+Personal site made in Vue <del>Animejs</del> GSAP and graphics in GIMP.
 
 Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
 
