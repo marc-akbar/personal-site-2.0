@@ -14,7 +14,7 @@ import Social from "components/Profile/Social.vue";
         <a
           class="resume-link"
           target="_blank"
-          href="images / Akbar_Marc_resume.pdf"
+          href="images/Akbar_Marc_resume.pdf"
           download
         >
           <WiggleButton class="resume-btn" label="RESUME" />
