@@ -5,7 +5,12 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      reactivityTransform: true,
+    }),
+  ],
+  base: process.env.NODE_ENV === "production" ? "/personal-site-2.0/" : "/",
   resolve: {
     alias: {
       assets: fileURLToPath(new URL("./src/assets", import.meta.url)),
