@@ -80,74 +80,38 @@ import WiggleButton from "components/Buttons/WiggleButton.vue";
 }
 
 .earlybird {
-  background-color: var(--eb-background);
+  background-color: var(--earlybird-background);
 
   .project-title {
-    color: var(--eb-title);
+    color: var(--earlybird-title);
   }
   .project-subtitle {
-    color: var(--eb-subtitle);
+    color: var(--earlybird-subtitle);
   }
   .project-description {
-    color: var(--eb-text);
+    color: var(--earlybird-text);
   }
   .project-btn {
-    background-color: var(--eb-btn);
-    color: var(--eb-btn-text);
+    background-color: var(--earlybird-btn);
+    color: var(--earlybird-btn-text);
   }
 }
 
-.trail-buddy {
-  background-color: var(--tb-background);
+.lacuna {
+  background-color: var(--lacuna-background);
 
   .project-title {
-    color: var(--tb-title);
+    color: var(--lacuna-title);
   }
   .project-subtitle {
-    color: var(--tb-subtitle);
+    color: var(--lacuna-subtitle);
   }
   .project-description {
-    color: var(--tb-text);
+    color: var(--lacuna-text);
   }
   .project-btn {
-    background-color: var(--tb-btn);
-    color: var(--tb-btn-text);
-  }
-}
-
-.finance {
-  background-color: var(--ft-background);
-
-  .project-title {
-    color: var(--ft-title);
-  }
-  .project-subtitle {
-    color: var(--ft-subtitle);
-  }
-  .project-description {
-    color: var(--ft-text);
-  }
-  .project-btn {
-    background-color: var(--ft-btn);
-    color: var(--ft-btn-text);
-  }
-}
-
-.weather {
-  background-color: var(--wb-background);
-
-  .project-title {
-    color: var(--wb-title);
-  }
-  .project-subtitle {
-    color: var(--wb-subtitle);
-  }
-  .project-description {
-    color: var(--wb-text);
-  }
-  .project-btn {
-    background-color: var(--wb-btn);
-    color: var(--wb-btn-text);
+    background-color: var(--lacuna-btn);
+    color: var(--lacuna-btn-text);
   }
 }
 
