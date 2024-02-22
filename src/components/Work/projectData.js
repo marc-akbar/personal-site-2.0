@@ -2,12 +2,12 @@ export const projectData = [
   {
     class: "lacuna",
     title: "HeskaView Telecytology (Lacuna Diagnostics)",
-    subtitle: "React | Node.js | MySQL | AWS",
+    subtitle: "React.js | Node.js | Go | MySQL | AWS",
     description:
-      "A conference management tool for Viget. I collaborated with other developers, designers and UX researchers to redesign the user dashboard / conference request flow and upgrade the app from Rails 4 to 6.",
+      "A pioneering digital cytology platform for the veterinary space. This redesign was built in 8 months with a team of four developers.",
     image: {
       source: "images/lacuna-image.png",
-      description: "early bird dashboard and request",
+      description: "lacuna dashboard",
     },
     links: [
       {
@@ -21,7 +21,7 @@ export const projectData = [
     title: "EarlyBird",
     subtitle: "Rails | ActiveAdmin | Materialize",
     description:
-      "A conference management tool for Viget. I collaborated with other developers, designers and UX researchers to redesign the user dashboard / conference request flow and upgrade the app from Rails 4 to 6.",
+      "A conference management tool for Viget. The existing platform was redesigned in collaborated with other developers, designers and UX researchers",
     image: {
       source: "images/eb-image.png",
       description: "early bird dashboard and request",
@@ -36,7 +36,7 @@ export const projectData = [
   {
     class: "personal",
     title: "marcakbar.dev",
-    subtitle: "Vue | GSAP | GIMP",
+    subtitle: "Vue.js | GSAP | GIMP",
     description:
       "A test in design. This site was an exploration into a lightweight web framework, animations, and design tools.",
     image: {
